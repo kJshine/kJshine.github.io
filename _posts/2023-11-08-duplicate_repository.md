@@ -12,7 +12,7 @@ author_profile: false
 
 그 중에서 발견한 Git hub 공식문서의 Manage contribution 탭을 보면
 
-![2023-11-08_001](/assets/images/2023-11-08-duplicate_repository/2023-11-08_001.jpg)
+![2023-11-08_001](../assets/images/2023-11-08-duplicate_repository/2023-11-08_001.jpg)
 
 **위처럼 커밋으로 인정되는 조건**들이 적혀있다.
 
