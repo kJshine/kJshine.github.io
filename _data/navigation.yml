@@ -18,3 +18,22 @@ main:
     url: /tags/
   - title: "연도"
     url: /year-archive/
+
+# 페이지내 왼쪽에 목차생성 (개별 md파일에 상단에
+# sidebar:
+#   nav: "docs")
+# 추가하면 됩니다
+
+# docs:
+#   - title: "대목차1"
+#     children:
+#       - title: "카테고리"
+#         url: /categories/
+#       - title: "태그"
+#         url: /tags/
+#   - title: "대목차2"
+#     children:
+#       - title: "카테고리"
+#         url: /categories/
+#       - title: "태그"
+#         url: /tags/
