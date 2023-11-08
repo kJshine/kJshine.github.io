@@ -12,7 +12,7 @@ author_profile: false
 
 그 중에서 발견한 Git hub 공식문서의 Manage contribution 탭을 보면
 
-![2023-11-08_001](../assets/images/2023-11-08-duplicate_repository/2023-11-08_001.jpg)
+![2023-11-08_001](/assets/images/2023-11-08-duplicate_repository/2023-11-08_001.jpg)
 
 **위처럼 커밋으로 인정되는 조건**들이 적혀있다.
 
@@ -33,11 +33,11 @@ fork한 repository에 잔디를 심는방법을 찾아보니
 
 ### 내 Git hub에 새로운 repository 생성
 
-![2023-11-08_002](../assets/images/2023-11-08-duplicate_repository/2023-11-08_002.jpg)
+![2023-11-08_002](/assets/images/2023-11-08-duplicate_repository/2023-11-08_002.jpg)
 
 ### 복사하려는 fork된 repository의 주소를 복사한다
 
-![2023-11-08_003](../assets/images/2023-11-08-duplicate_repository/2023-11-08_003.jpg)
+![2023-11-08_003](/assets/images/2023-11-08-duplicate_repository/2023-11-08_003.jpg)
 
 ### 터미널을 열고 복사한 주소를 bare clone 한다
 fork된 repositoty 주소: https://github.com/kJshine/kJshine.github.io.fork.git
