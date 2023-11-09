@@ -3,7 +3,6 @@ layout: single
 title:  "Git hub 블로그 이미지 경로"
 categories: jekyll
 tag: [image, github pages, jekyll]
-toc: true
 author_profile: false
 ---
 
