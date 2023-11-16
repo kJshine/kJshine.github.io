@@ -64,7 +64,7 @@ const p2 = new arrow();
 
 위처럼 화살표 함수로 setTimeout함수를 정의한다면 화살표 함수에서의 this가 그 위의 생성자함수를 가리킬 수 있습니다.
 
-## forEach, map, reduce, filter
+## forEach, map, reduce, filter, every, some
 
 ```javascript
 const arr = new Array();
@@ -98,6 +98,51 @@ console.log(d); // [1, 3, 5]
 2. map: 배열을 이용해서 **새로운** 배열을 만들 때 사용. 새로운 배열을 반환
 3. filter: 배열을 이용해 **조건**에 맞는 원소로 배열을 만들 때 사용. 추출만 가능하고 원소를 변화시킬 순 없음
 4. reduce: 배열을 통해 **하나의 계산된 값**을 추출해낼 때 사용. 반환값이 존재
+
+```javascript
+const numbers = [1, 3, 5, 4];
+const isAllOdd = numbers.every(e => e % 2);
+const isSomeOdd = numbers.some(e => e % 2);
+console.log(isAllOdd, isSomeOdd); // false true
+```
+5. every는 모든 조건을 만족해야 true를 리턴합니다.
+6. some은 하나의 조건만 만족하면 true를 리턴합니다
+
+## find, findIndex, includes
+
+```javascript
+const condition = e => e.money >= 10000;
+const persons = [
+    {"name": "a", "money" : 1000},
+    {"name": "b", "money" : 5000},
+    {"name": "c", "money" : 10000},
+    {"name": "d", "money" : 20000}
+]
+const rich = persons.find(condition);
+console.log(rich); // {"name": "c", "money" : 10000}
+const richIndex = persons.findIndex(condition);
+console.log(richIndex); // 2
+```
+위 코드 결과처럼 find, findIndex 모두 배열에서 조건에 해당하는 요소를 발견한다면 요소를 반환하고 종료한다는 특징이 있습니다.
+
+```javascript
+const a = new Array();
+a.push(1, 2, 3, 4, 5);
+console.log(a.includes(3)); // true
+
+const result = a.findIndex(e => e === 3);
+console.log(result); // 2
+```
+includes는 ES7문법이며 **배열에 어떠한 요소가 있는지 확인**하는 함수이다. 베열에 어떤 요소가 있는지 없는지만을 확인한다면 includes를 사용하며 반환값은 true false 입니다. 
+
+어떤 요소를 찾고 그 해당 인덱스를 반환해야 한다면 indexOf / findIndex를 사용합니다. findIndex가 indexOf보다 더 빠르다는 장점이 있으므로 findIndex의 사용을 권장합니다.
+
+```javascript
+const a = [1, 2, 3, 4, 5]
+const result = a.findIndex(e => e === 3);
+console.log(result) // 2
+```
+
 
 **[Reference]** 실시간 모니터링 시스템을 만들며 정복하는 MEVN
 {: .notice--info}
