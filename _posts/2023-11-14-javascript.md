@@ -143,6 +143,68 @@ const result = a.findIndex(e => e === 3);
 console.log(result) // 2
 ```
 
+## 구문 생략, spread 연산자
+### 구문 생략
+```javascript
+const name = "진양철";
+const job = "회장";
+const age = "58";
+const data_used_ES6 = {name, job, age}
+const data_not_used_ES6 = {"name": name, "job": job, "age": age}
+console.log(data_used_ES6); // {name: '진양철', job: '회장', age: '58'}
+console.log(data_not_used_ES6); // {name: '진양철', job: '회장', age: '58'}
+```
+위의 출력 결과는 동일하지만 구문 생략을 통해 쉽게 객체를 정의할 수 있습니다.
+
+### spread 연산자
+1. rest 매개변수
+
+```javascript
+const result_1 = (first, ...rest) => {
+    console.log(...rest);
+}
+result_1(1, 2, 3); // 2 3
+
+const value_1 = [1, 2, 3];
+const result_2 = (a, b, c) => console.log(a, b, c);
+result_2(...value_1); // 1 2 3
+
+const value_2 = [1, 2, 3, 4, 5];
+const [first, ...rest] = value_2;
+console.log(first, rest); // 1, [2, 3, 4, 5]
+```
+1. result_1 **함수의 매개변수를 담는 용도**로 사용. first를 제외한 나머지를 배열로 담을 수 있습니다.
+2. 배열 value_1을 분해해서 각각 a, b, c로 담을 수 있습니다.
+3. **배열의 나머지 것들을 쉽게 처리할 때 사용**. rest에는 first를 제외한 나머지 변수들이 담겨있습니다.
+
+2. 배열 통합
+
+```javascript
+const first = [1, 2, 3];
+const second = [4, 5, 6];
+const third = [...first, ...second];
+console.log(third); // [1, 2, 3, 4, 5, 6]
+```
+두개 이상의 배열을 합치는 방법은 concat()메서드도 존재합니다. 하지만 spread 연산자를 통해 first와 second를 분해해서 배열에 순수 요소들로 들어가게 해서 배열을 합치는 방법도 존재합니다.
+
+3. Max 함수 매개변수로 집어넣기
+
+```javascript
+const arr = [1, 2, 3, 4];
+const result = Math.max(...arr);
+console.log(result); // 4
+```
+spread 연산자를 응용하여 Math.max()에 사용할 수 있습니다. spread 연산자를 통해 순수 요소들로 분해하여 그 중 최댓값을 뽑아내는 것입니다. 이외에 Math.min()에도 응용 가능합니다.
+
+4. 객체 복사
+
+```javascript
+const before = {"name": "진양철", "age": "58"};
+const after = {...before, "job": "회장"};
+console.log(after); // {name: '진양철', age: '58', job: '회장'}
+```
+객체 안에 있는 값들을 순수 key와 value로 분해하고 직접 복사를 통해 다시 새로운 객체에 할당할 수 있습니다. 하지만 객체의 깊이가 1단계인 경우에 한해서만 가능합니다.
+
 
 **[Reference]** 실시간 모니터링 시스템을 만들며 정복하는 MEVN
 {: .notice--info}
