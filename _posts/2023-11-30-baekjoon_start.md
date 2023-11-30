@@ -77,7 +77,7 @@ const b = Number(input[1]);
 console.log(a + b);
 ```
 위처럼 코드를 먼저 테스트파일에서 진행해보시고 원하는 출력값이 나왔다면   
-제출코드에서는 현재 readFileSync에 './input.txt'를 **/dev/stdin** 으로 변경하여 제출하시면 됩니다!
+제출코드에서는 현재 readFileSync에 ./input.txt를 **/dev/stdin** 으로 변경하여 제출하시면 됩니다!
 
 **[Reference]** [[Youtube] 초보자가 자바스크립트로 백준 문제 푸는 법](https://www.youtube.com/watch?v=myDEDaaOd30)
 {: .notice--info}
